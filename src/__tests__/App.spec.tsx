@@ -25,7 +25,6 @@ test("Counter starts at zero", async () => {
     expect(button?.textContent).toEqual("count is 0");
 })
 
-
 test("Counter increments when clicked", () => {
     render(<App />)
     const button = screen.getByRole("button");

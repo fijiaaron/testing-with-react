@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# Testing with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### To start from scratch
 
-Currently, two official plugins are available:
+   npm create vite
+   
+   > Project name: testing-with-react
+   > Select a framework: React
+   > Select a variant: Typescript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   cd test-with-react
+   npm install
+   npm run dev
 
-## Expanding the ESLint configuration
+### add dependencies for Jest, React, etc
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   npm install typescript ts-node --save-dev
+   npm install jest --save-dev
+   npm install ts-jest @types/jest --save-dev
+   npm install @testing-library/react --save-dev
+   npm install @testing-library/jest-dom --save-dev
+   npm install jest-environment-jsdom --save-dev
+   npm install identity-obj-proxy --save-dev
 
-- Configure the top-level `parserOptions` property like this:
+### create jest.config.ts
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+   (see file)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### create mock for static files in  
+
+   test/__mocks__/fileMock.js 
+
+### create tests in __test__ filder
+
+   __test__/App.spec.tsx
+
+
+NOTE: This folder structure with /test/__mock__ and /__test__ seems a bit janky to me. 
+I copied an example but haven't explored how to do it a cleaner way.
