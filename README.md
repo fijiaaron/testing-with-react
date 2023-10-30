@@ -37,3 +37,17 @@
 
 NOTE: This folder structure with /test/__mock__ and /__test__ seems a bit janky to me. 
 I copied an example but haven't explored how to do it a cleaner way.
+
+### Setup "npm test"
+
+Add the following to package.json under "scripts"
+
+   "test": "jest"
+
+### Run tests
+
+   npm test
+
+or 
+
+   ./node_modules/.bin/jest
